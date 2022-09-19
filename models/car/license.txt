@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lamborgini Terzo
+* source:	https://sketchfab.com/3d-models/lamborgini-terzo-8ce68c5d126e42c697833212c3c21772
+* author:	3DMAN (https://sketchfab.com/3dmanx888)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lamborgini Terzo" (https://sketchfab.com/3d-models/lamborgini-terzo-8ce68c5d126e42c697833212c3c21772) by 3DMAN (https://sketchfab.com/3dmanx888) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
