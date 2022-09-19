@@ -4,8 +4,17 @@ import {
   OrbitControls,
   PerspectiveCamera,
 } from "@react-three/drei";
+import {
+  Bloom,
+  ChromaticAberration,
+  DepthOfField,
+  EffectComposer,
+} from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
 import React from "react";
+import Boxes from "./Boxes";
 import Car from "./Car";
+import FloatingGrid from "./FloatingGrid";
 import Ground from "./Ground";
 import Ring from "./Ring";
 
@@ -28,6 +37,8 @@ const CarShow = () => {
       </CubeCamera>
 
       <Ring />
+      <Boxes />
+      <FloatingGrid />
 
       {/* 
         let spotlight = new SpotLight()
@@ -54,6 +65,28 @@ const CarShow = () => {
       />
 
       <Ground />
+
+      <EffectComposer>
+        <DepthOfField
+          focusDistance={0.0055}
+          focalLength={0.01}
+          bokehScale={3}
+          height={480}
+        />
+        <Bloom
+          blendFunction={BlendFunction.ADD}
+          intensity={1.2}
+          width={300}
+          height={300}
+          kernelSize={5}
+          luminanceThreshold={0.15}
+          luminanceSmoothing={0.25}
+        />
+        <ChromaticAberration
+          blendFunction={BlendFunction.NORMAL}
+          offset={[0.0000005, 0.000012]}
+        />
+      </EffectComposer>
     </>
   );
 };

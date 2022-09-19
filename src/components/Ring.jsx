@@ -22,9 +22,13 @@ const Ring = () => {
       coloScale *= 0.5;
 
       if (i % 2 === 1) {
-        mesh.material.emissive = new Color(6, 0.15, 0.7).multiplyScalar(0.5);
+        mesh.material.emissive = new Color(6, 0.15, 0.7).multiplyScalar(
+          coloScale
+        );
       } else {
-        mesh.material.emissive = new Color(0.1, 0.7, 3).multiplyScalar(0.5);
+        mesh.material.emissive = new Color(0.1, 0.7, 3).multiplyScalar(
+          coloScale
+        );
       }
     }
   });
