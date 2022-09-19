@@ -5,7 +5,7 @@ import CarShow from "./components/CarShow";
 
 function App() {
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<div className="loading">Loading...</div>}>
       <Canvas shadows>
         <CarShow />
       </Canvas>

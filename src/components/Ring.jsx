@@ -6,10 +6,11 @@ const Ring = () => {
   const itemsRef = useRef([]);
 
   useFrame((state) => {
+    let elapsed = state.clock.getElapsedTime();
     for (let i = 0; i < itemsRef.current.length; i++) {
       let mesh = itemsRef.current[i];
       // [-7,7]
-      let z = (i - 7) * 3.5;
+      let z = (i - 9) * 4.5 + ((elapsed * 0.4) % 4.5) * 2;
       mesh.position.set(0, 0, -z);
 
       let dist = Math.abs(z);
